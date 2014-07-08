@@ -4,5 +4,5 @@ template
 Simple Templates
 
 Usage 
-
-var s = "<p> {salutation} {name} likes {likes}.</p>".template({name:"Polly", salutation:"Ms", likes:"birds"});
+var temp="<p> {salutation} {name} likes {likes}.</p>";
+var s = temp.template({name:"Polly", salutation:"Ms", likes:"birds"});

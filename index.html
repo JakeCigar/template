@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>prototype.template</title>
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="template.js"></script>
+	<script>
+	var data =[
+		{name:"Joe", salutation:"Mr.", likes:"dogs"},
+		{name:"Mary", salutation:"Mrs", likes:"cats"},
+		{name:"Roddy", salutation:"Mr.", likes:"rodents"},
+		{name:"Polly", salutation:"Ms", likes:"birds"},
+	]
+	var template = "<p> {salutation} {name} likes {likes}.</p>"
+	$(function(){
+		var html=""
+		$.each(data,function(){
+			html+= template.template(this)
+		})
+		$("body").html(html)
+	})
+	</script>
+	<style>
+
+	</style>
+</head>
+<body>
+</body>
+</html>
